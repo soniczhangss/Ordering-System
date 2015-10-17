@@ -1,0 +1,8 @@
+{
+  "name": "laravel-and-foundation",
+  "private": "true",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "moment": "~2.10.6"
+  }
+}

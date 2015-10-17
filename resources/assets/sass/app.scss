@@ -1,0 +1,264 @@
+@import "normalize";
+@import "settings";
+@import "foundation";
+@import "foundation.calendar";
+
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
+
+/* Global */
+body {
+  background-color: $ghost;
+}
+
+body, html {
+  height: 100%;
+}
+
+.off-canvas-wrap {
+  height:100%;
+  overflow-y:scroll;
+}
+
+.inner-wrap {
+  min-height:100%;
+}
+
+/* Calendar */
+.calendar {
+    border-bottom: $oil;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.calendar .day-header {
+	background-color: $oil; 
+}
+
+.calendar .day-header .day,
+.calendar .day-header .days { 
+    background-color: $oil;
+    font-size: 16px;
+}
+
+.my-text-justify {
+	@extend .text-justify;
+	vertical-align: middle;
+}
+
+.calendar .my-day-header {
+  @extend .day-header;
+  @extend .title;
+  color: $white;
+  padding: 5px 0px 5px 0px;
+  font-size: 18px;
+}
+
+.week-num {
+  @extend .day;
+  @extend .small-1;
+  @extend .medium-1;
+  @extend .large-1;
+  font-weight: bold;
+}
+
+/*li.week {
+  cursor: pointer;
+}*/
+
+li.week:hover {
+  cursor: pointer;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 0px 4px $jet;
+  -webkit-box-shadow: 0px 0px 4px $jet;
+  box-shadow: 0px 0px 4px $jet;
+  background: $white;
+  transition: background 0.5s;
+}
+
+li.week.highlighted {
+  background: $iron !important;
+}
+
+/*[title]{
+  position:relative;
+}
+[title]:after{
+  content:attr(title);
+  color:#fff;
+  background:#333;
+  background:rgba(51,51,51,0.75);
+  padding:5px;
+  position:absolute;
+  left:-9999px;
+  opacity:0;
+  bottom:100%;
+  white-space:nowrap;
+  font-size: 20px;
+  -webkit-transition:0.25s linear opacity;
+  z-index: 1;
+}
+[title]:hover:after{
+  left:5px;
+  opacity:1;
+}*/
+
+.selected {
+  border-left: thick solid #f04124;
+}
+
+.ordered {
+  background: #FF9494 !important;
+}
+
+.available {
+  background: #FFCC66 !important;
+}
+
+.month_day_height {
+  @extends .calendar .day;
+  min-height: 6rem !important;
+}
+
+/* Panel */
+.my-panel {
+  @extend .panel;
+  margin-top: rem-calc(45);
+}
+
+.nav-date {
+  margin-left: 10px;
+}
+
+/* Side menu */
+.my-icon-bar {
+	@extend .icon-bar;
+	margin-top: rem-calc(45);
+}
+
+/* Login */
+.center.row {
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  max-width: 500px;
+}
+
+.login {
+  @extend .center.row;
+  max-width: 1000px;
+}
+
+.signup-panel {
+  padding: 15px;
+  i {
+    font-size: 30px;
+    line-height: 50px;
+    color: #999;
+  }
+  form {
+    input, span {
+      height: 50px;
+    }
+  }
+  .welcome {
+    font-size: 26px;
+    text-align: center;
+    margin-left: 0;
+  }
+  .button {
+    margin-left: 35%;
+  }
+}
+
+section.active {
+  padding-top: 75px !important;
+}
+
+p.title {
+  border-bottom: 1px solid #cccccc !important;
+}
+
+.content {
+  height: 450px;
+}
+
+/* Register */
+.select-register {
+  width: 100%;
+  height: 50px;
+}
+
+/* Top bar */
+.my-logout-button {
+  @extend .button;
+  @extend .alert;
+  height: rem-calc(45);
+  font-size: rem-calc(28);
+  padding: rem-calc(7) rem-calc(10) rem-calc(5) rem-calc(12);
+  margin-left: rem-calc(17);
+}
+
+/* Datatable */
+select {
+  width: 70%;
+}
+
+.dt-buttons {
+  @extend .round;
+  @extend .right;
+  @extend .tiny;
+  @extend .secondary;
+  margin-bottom: rem-calc(10);
+}
+
+.dt-buttons .button {
+  @extend .tiny;
+  @extend .secondary;
+}
+
+table tbody tr.selected4D {
+  background-color: #B0BED9;
+}

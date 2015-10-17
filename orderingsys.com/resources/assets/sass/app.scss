@@ -1,0 +1,142 @@
+@import "normalize";
+@import "settings";
+@import "foundation";
+@import "foundation.calendar";
+
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
+
+/* Global */
+body {
+  background-color: $ghost;
+}
+
+/* Calendar */
+.calendar {
+    border-bottom: $oil;
+}
+
+.calendar .day-header {
+	background-color: $oil; 
+}
+
+.calendar .day-header .day,
+.calendar .day-header .days { 
+    background-color: $oil;
+}
+
+.my-text-justify {
+	@extend .text-justify;
+	vertical-align: middle;
+}
+
+.calendar .my-day-header {
+  @extend .day-header;
+  @extend .title;
+  color: $white;
+  padding: 5px 0px 5px 0px;
+}
+
+.highlighted {
+  background: #efefef;
+}
+
+.selected {
+  border-style: solid;
+  border-width: 5px;
+  border-color: red;
+}
+
+.ordered {
+  background: #3399FF !important;
+}
+
+/* Panel */
+.my-panel {
+  @extend .panel;
+  margin-top: rem-calc(45);
+}
+
+/* Side menu */
+.my-icon-bar {
+	@extend .icon-bar;
+	margin-top: rem-calc(45);
+}
+
+/* Login */
+.center.row {
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  max-width: 500px;
+}
+
+.signup-panel {
+  padding: 15px;
+  i {
+    font-size: 30px;
+    line-height: 50px;
+    color: #999;
+  }
+  form {
+    input, span {
+      height: 50px;
+    }
+  }
+  .welcome {
+    font-size: 26px;
+    text-align: center;
+    margin-left: 0;
+  }
+  .button {
+    margin-left: 35%;
+  }
+}
+
+section.active {
+  padding-top: 75px !important;
+}
+
+p.title {
+  border-bottom: 1px solid #cccccc !important;
+}
+
+.content {
+  height: 450px;
+}
